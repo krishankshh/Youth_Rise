@@ -1,0 +1,271 @@
+.get-involved-page {
+  padding-top: 80px;
+}
+
+/* Hero */
+.page-hero {
+  background: linear-gradient(135deg, var(--deep-blue) 0%, var(--blue-light) 100%);
+  padding: var(--space-3xl) 0;
+  color: var(--white);
+  text-align: center;
+}
+
+.page-hero h1 {
+  color: var(--white) !important;
+  margin-bottom: var(--space-md);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.hero-subtitle {
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  max-width: 720px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.7;
+}
+
+/* Scroll Animations */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-animate.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Lead Text */
+.lead {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* Involvement Section */
+.involvement-section {
+  background: var(--off-white);
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: var(--space-md) auto var(--space-3xl);
+}
+
+.involvement-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.involvement-card {
+  background: var(--white);
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: all var(--transition-base);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.involvement-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--saffron-orange), var(--saffron-light));
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.involvement-card:hover::before {
+  transform: scaleX(1);
+}
+
+.involvement-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--soft-grey);
+}
+
+.involvement-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-md);
+  transition: all var(--transition-base);
+}
+
+.volunteer-icon {
+  background: linear-gradient(135deg, var(--deep-blue), var(--blue-light));
+  color: var(--white);
+}
+
+.mentor-icon {
+  background: linear-gradient(135deg, var(--saffron-orange), var(--saffron-light));
+  color: var(--white);
+}
+
+.partner-icon {
+  background: linear-gradient(135deg, var(--india-green), var(--green-light));
+  color: var(--white);
+}
+
+.advocate-icon {
+  background: linear-gradient(135deg, var(--blue-light), var(--saffron-light));
+  color: var(--white);
+}
+
+.involvement-card:hover .involvement-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.involvement-card h3 {
+  color: var(--deep-blue);
+  margin-bottom: var(--space-sm);
+  font-size: 1.375rem;
+  font-weight: 600;
+}
+
+.involvement-card p {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.involvement-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.involvement-benefits li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-xs) 0;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+}
+
+.involvement-benefits li svg {
+  color: var(--india-green);
+  flex-shrink: 0;
+}
+
+/* Form Section */
+.volunteer-form-section {
+  background: var(--white);
+  padding: var(--space-3xl) 0 var(--space-3xl);
+}
+
+.container-medium {
+  max-width: 840px;
+}
+
+.form-header {
+  margin-bottom: var(--space-3xl);
+}
+
+.form-header h2 {
+  margin-bottom: var(--space-md);
+}
+
+.form-intro {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.volunteer-form {
+  background: var(--off-white);
+  padding: var(--space-3xl);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--soft-grey);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.btn-submit {
+  width: 100%;
+  margin-top: var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.form-message {
+  margin-top: var(--space-xl);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  font-size: 1.0625rem;
+}
+
+.success-message {
+  background: rgba(30, 127, 75, 0.1);
+  border: 2px solid var(--india-green);
+  color: var(--india-green);
+}
+
+.success-message svg {
+  flex-shrink: 0;
+}
+
+.error-message {
+  background: rgba(220, 53, 69, 0.1);
+  border: 2px solid #dc3545;
+  color: #dc3545;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .involvement-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .get-involved-page {
+    padding-top: 70px;
+  }
+
+  .involvement-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .volunteer-form {
+    padding: var(--space-xl);
+  }
+
+  .involvement-card {
+    padding: var(--space-xl);
+  }
+}
