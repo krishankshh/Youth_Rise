@@ -1,0 +1,28 @@
+{
+  "programs": [
+    {
+      "id": "gujarat-vadnagar",
+      "title": "Gujarat Initiative - PM's Childhood School",
+      "location": "Vadnagar, Gujarat",
+      "date": "January 2024",
+      "status": "completed",
+      "coverImage": "newspaper.jpeg",
+      "description": "Our landmark program at the Prime Minister's childhood school in Gujarat marked a significant milestone in our journey to empower India's youth. Over three days, our dedicated team of volunteers worked with hundreds of students, providing educational workshops, motivational sessions, and skill-building activities.",
+      "fullDescription": "This transformative program brought together passionate volunteers and enthusiastic students in an environment of learning and growth. We conducted interactive workshops covering academic subjects, leadership development, and practical life skills. The program's success was evident in the engagement and enthusiasm of the students, many of whom expressed newfound confidence and clarity about their future goals.",
+      "stats": {
+        "students": "500+",
+        "volunteers": "20+",
+        "days": "3"
+      },
+      "highlights": [
+        "Educational workshops covering multiple subjects",
+        "Leadership and confidence-building sessions",
+        "Skill development activities",
+        "One-on-one mentoring opportunities",
+        "Interactive group discussions",
+        "Career guidance sessions"
+      ],
+      "impact": "The program reached over 500 students, providing them with valuable educational resources, mentorship, and inspiration to pursue their dreams. Many students reported increased motivation and clearer academic goals following the program."
+    }
+  ]
+}
