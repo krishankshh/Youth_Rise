@@ -121,6 +121,97 @@
   margin: 0;
 }
 
+/* Founder Section */
+.founder-section {
+  background: var(--white);
+}
+
+.founder-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-3xl);
+  align-items: start;
+  margin-top: var(--space-2xl);
+  padding: var(--space-2xl);
+  background: var(--off-white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.founder-image {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-base);
+}
+
+.founder-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.founder-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.founder-bio h3 {
+  color: var(--deep-blue);
+  font-size: 2rem;
+  margin-bottom: var(--space-xs);
+}
+
+.founder-title {
+  color: var(--saffron-orange);
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: var(--space-lg);
+}
+
+.founder-bio p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+/* Co-Founder Card Specific Styles */
+.cofounder-image-wrapper {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto var(--space-lg);
+  border: 4px solid var(--saffron-orange);
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-md);
+}
+
+.mv-card:hover .cofounder-image-wrapper {
+  transform: scale(1.1);
+  border-color: var(--deep-blue);
+  box-shadow: var(--shadow-lg);
+}
+
+.cofounder-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cofounder-role {
+  color: var(--saffron-orange);
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+
 /* Values Grid */
 .section-subtitle {
   text-align: center;
@@ -273,5 +364,20 @@
   .cta-buttons .btn {
     width: 100%;
     max-width: 320px;
+  }
+
+  /* Founder Section Mobile */
+  .founder-content {
+    grid-template-columns: 1fr;
+    padding: var(--space-xl);
+  }
+
+  .founder-image {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .founder-bio {
+    text-align: center;
   }
 }

@@ -1,0 +1,42 @@
+; Domain: youthriseindia.in
+; Updated for Netlify hosting: 2026-01-08
+;
+; This DNS zone file is configured for Netlify hosting
+; Import this file to GoDaddy DNS Manager
+;
+
+$ORIGIN youthriseindia.in.
+
+; SOA Record (GoDaddy will auto-populate this)
+@	3600	 IN 	SOA	ns39.domaincontrol.com.	dns.jomax.net. (
+					2026010800
+					28800
+					7200
+					604800
+					3600
+					) 
+
+; NS Records (GoDaddy nameservers - keep as is)
+@	3600	 IN 	NS	ns39.domaincontrol.com.
+@	3600	 IN 	NS	ns40.domaincontrol.com.
+
+; A Records - Point to Netlify Load Balancer
+@	600	 IN 	A	75.2.60.5
+@	600	 IN 	A	99.83.190.102
+@	600	 IN 	A	13.248.212.111
+@	600	 IN 	A	76.76.21.21
+
+; CNAME Record - www subdomain points to Netlify
+www	600	 IN 	CNAME	youthriseindia.netlify.app.
+
+; CAA Record - Authorize Let's Encrypt to issue SSL certificates
+@	300	 IN 	CAA	0 issue "letsencrypt.org;accounturi=https://acme-v02.api.letsencrypt.org/acme/acct/54403714"
+
+; TXT Records
+_dmarc	3600	 IN 	TXT	"v=DMARC1; p=quarantine; adkim=r; aspf=r; rua=mailto:dmarc_rua@onsecureserver.net;"
+
+; Notes:
+; 1. TTL set to 600 seconds (10 minutes) for faster DNS updates
+; 2. Four A records provide Netlify's load balancing and redundancy
+; 3. After importing, wait 10-30 minutes for DNS propagation
+; 4. Then configure SSL certificate in Netlify (it will auto-provision)

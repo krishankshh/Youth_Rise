@@ -44,26 +44,51 @@ function About() {
         </div>
       </section>
 
-      {/* Mission & Vision - Enhanced */}
+      {/* Founder Section */}
+      <section className="section founder-section">
+        <div className="container">
+          <h2 className="text-center scroll-animate">Meet Our Founder</h2>
+          <div className="founder-content scroll-animate">
+            <div className="founder-image">
+              <img src="/founder.png" alt="Founder Name" />
+            </div>
+            <div className="founder-bio">
+              <h3>Founder Name</h3>
+              <p className="founder-title">Founder & CEO</p>
+              <p>
+                [Replace with founder's introduction and biography. Share their vision, passion, and journey in creating Youth Rise India. This should be 2-3 paragraphs describing their background, motivation, and commitment to empowering India's youth.]
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Driven by a passion for youth empowerment and social impact, they founded Youth Rise India to create meaningful opportunities for young people across the nation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Co-Founders Section */}
       <section className="section mission-vision-section">
         <div className="container">
-         <div className="mv-grid">
+          <h2 className="text-center scroll-animate">Our Co-Founders</h2>
+          <div className="mv-grid">
             <div className="mv-card scroll-animate">
-              <div className="icon-circle-large mission-gradient">
-                <CheckCircle2 size={48} strokeWidth={2.5} color="white" />
+              <div className="cofounder-image-wrapper">
+                <img src="/cofounder1.png" alt="Co-Founder 1" className="cofounder-image" />
               </div>
-              <h3>Our Mission</h3>
+              <h3>Co-Founder Name 1</h3>
+              <p className="cofounder-role">Co-Founder & Head of Operations</p>
               <p>
-                To empower and inspire India's youth through accessible education, mentorship, and skill development programs that foster leadership, creativity, and social responsibility.
+                [Replace with co-founder's introduction. Brief bio highlighting their role, expertise, and contribution to Youth Rise India.]
               </p>
             </div>
             <div className="mv-card scroll-animate">
-              <div className="icon-circle-large vision-gradient">
-                <Star size={48} strokeWidth={2.5} color="white" />
+              <div className="cofounder-image-wrapper">
+                <img src="/cofounder2.png" alt="Co-Founder 2" className="cofounder-image" />
               </div>
-              <h3>Our Vision</h3>
+              <h3>Co-Founder Name 2</h3>
+              <p className="cofounder-role">Co-Founder & Head of Programs</p>
               <p>
-                To create a generation of confident, compassionate, and capable young leaders who drive positive change in their communities and contribute to India's progress.
+                [Replace with co-founder's introduction. Brief bio highlighting their role, expertise, and contribution to Youth Rise India.]
               </p>
             </div>
           </div>
