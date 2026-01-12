@@ -100,8 +100,8 @@
 }
 
 .social-link:hover {
-  background: var(--saffron-orange);
-  transform: translateY(-3px);
+  /* background: var(--saffron-orange); */
+  transform: translateY(-4px);
   box-shadow: 0 4px 12px rgba(243, 108, 33, 0.3);
 }
 

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Contact.css';
 
 function Contact() {
@@ -11,6 +11,27 @@ function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+  // --- Scroll Animation Logic ---
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    const animatedElements = document.querySelectorAll('.scroll-animate');
+    animatedElements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -73,7 +94,8 @@ function Contact() {
       <section className="section">
         <div className="container">
           <div className="contact-grid">
-            <div className="contact-info">
+            
+              <div className="contact-info scroll-animate"> 
               <h2>Get in Touch</h2>
               <p className="contact-intro">
                 Have questions, ideas, or want to collaborate? We're here to help! Reach out to us through any of the following channels.
@@ -136,7 +158,8 @@ function Contact() {
               </div>
             </div>
 
-            <div className="contact-form-wrapper">
+               <div className="contact-form-wrapper scroll-animate">
+            
               <h2>Send Us a Message</h2>
               <form className="contact-form" onSubmit={handleSubmit}>
                 <div className="form-group">
