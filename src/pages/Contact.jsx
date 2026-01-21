@@ -86,8 +86,8 @@ function Contact() {
     <div className="contact-page">
       <section className="page-hero">
         <div className="container text-center">
-          <h1 className="fade-in">Contact Us</h1>
-          <p className="hero-subtitle">We'd Love to Hear From You</p>
+          <h1 className="scroll-animate">Contact Us</h1>
+          <p className="hero-subtitle scroll-animate">We'd Love to Hear From You</p>
         </div>
       </section>
 

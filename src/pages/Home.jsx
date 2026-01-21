@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 import { CheckCircle2, Star, ArrowRight, Sparkles, Users, Book, Target } from 'lucide-react';
 import './Home.css';
 
@@ -207,26 +208,43 @@ function Home() {
 
       {/* Latest Updates with Image */}
       <section className="section updates-section">
-        <div className="container">
-          <div className=" update-wrapper">
-            <div className="update-image scroll-animate">
-              <img src="/leadership.png" alt="Leadership and Growth" />
-            </div>
-            <div className="update-content scroll-animate">
-              <div className="badge badge-saffron">Recent Program</div>
-              <h2>Gujarat Initiative</h2>
-              <h3>PM's Childhood School</h3>
-              <p>
-                We recently conducted an impactful program at the Prime Minister's childhood school in Gujarat, inspiring hundreds of students with education, motivation, and skill-building activities. This milestone program marked our commitment to reaching young minds across India.
-              </p>
-              <a href="/programs" className="btn btn-primary btn-glow">
-                Learn More About Our Programs
-                <ArrowRight size={18} />
-              </a>
-            </div>
-          </div>
+      <div className="container">
+        <div className="update-wrapper">
+          
+          {/* Slide in from Left */}
+          <motion.div 
+            className="update-image"
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <img src="/leadership.png" alt="Leadership and Growth" />
+          </motion.div>
+
+          {/* Slide in from Right */}
+          <motion.div 
+            className="update-content"
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <div className="badge badge-saffron">Recent Program</div>
+            <h2>Gujarat Initiative</h2>
+            <h3>PM's Childhood School</h3>
+            <p>
+              We recently conducted an impactful program at the Prime Minister's childhood school in Gujarat, inspiring hundreds of students with education, motivation, and skill-building activities. This milestone program marked our commitment to reaching young minds across India.
+            </p>
+            <a href="/programs" className="btn btn-primary btn-glow">
+              Learn More About Our Programs
+              <ArrowRight size={18} />
+            </a>
+          </motion.div>
+
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Call to Action - Enhanced */}
       <section className="section cta-section">
