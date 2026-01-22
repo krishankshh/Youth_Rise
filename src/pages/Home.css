@@ -276,6 +276,7 @@
 
 
 .mission-card-inline:hover {
+  transform: translateX(18px);
   box-shadow:
     0 28px 70px rgba(0, 0, 0, 0.18),
     inset 4px 0 0 rgba(243, 108, 33, 0.08);
