@@ -27,6 +27,7 @@ function Navbar() {
     { path: '/get-involved', label: 'Get Involved' },
     { path: '/donate', label: 'Donate' },
     { path: '/contact', label: 'Contact' },
+    { path: '/in-loving-memory', label: 'In Loving Memory' }
   ];
 
   return (

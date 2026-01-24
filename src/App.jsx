@@ -8,6 +8,7 @@ import Programs from './pages/Programs';
 import GetInvolved from './pages/GetInvolved';
 import Donate from './pages/Donate';
 import Contact from './pages/Contact';
+import InLovingMemory from './pages/InLovingMemory';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/get-involved" element={<GetInvolved />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/in-loving-memory" element={<InLovingMemory />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
