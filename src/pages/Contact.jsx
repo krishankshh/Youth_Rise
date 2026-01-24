@@ -81,13 +81,14 @@ function Contact() {
       setIsSubmitting(false);
     }
   };
+  const [activeFaq, setActiveFaq] = useState(null);
 
   return (
     <div className="contact-page">
       <section className="page-hero">
         <div className="container text-center">
-          <h1 className="fade-in">Contact Us</h1>
-          <p className="hero-subtitle">We'd Love to Hear From You</p>
+          <h1 className="scroll-animate">Contact Us</h1>
+          <p className="hero-subtitle scroll-animate">We'd Love to Hear From You</p>
         </div>
       </section>
 
@@ -258,6 +259,54 @@ function Contact() {
           </div>
         </div>
       </section>
+      {/* --- FAQ Section --- */}
+<section className="faq-section section">
+  <div className="container">
+    <div className="contact-faq scroll-animate">
+      <div className="faq-header text-center">
+        <h2>Frequently Asked Questions</h2>
+        <p>Quick answers to common inquiries</p>
+      </div>
+      
+      <div className="faq-list">
+        {[
+          {
+            q: "How can I join as a volunteer?",
+            a: "You can join by filling out our volunteer form or reaching out via WhatsApp. We have various roles available in teaching, social media, and event management."
+          },
+         {
+    q: "How are donations utilized?",
+    a: "Donations are used to support youth education programs, skill-building initiatives, community outreach activities, and the operational costs required to run our projects effectively."
+  },
+          {
+  q: "Where is Youth Rise India located?",
+  a: "Youth Rise India is based in Mumbai, Maharashtra. Our initiatives and programs are primarily carried out through on-ground activities focused on community engagement and youth empowerment."
+},
+          {
+    q: "How can I stay updated with your work?",
+    a: "You can follow us on Instagram and join our WhatsApp community to stay informed about our programs, events, and impact stories."
+  }
+        ].map((faq, index) => (
+          <div 
+            key={index} 
+            className={`faq-item ${activeFaq === index ? 'active' : ''}`}
+            onClick={() => setActiveFaq(activeFaq === index ? null : index)}
+          >
+            <div className="faq-question">
+              <span>{faq.q}</span>
+              <span className="faq-icon">{activeFaq === index ? '−' : '+'}</span>
+            </div>
+            <div className="faq-answer">
+              <div className="answer-content">
+                <p>{faq.a}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { CheckCircle2, Star, Heart, Users, Lightbulb, Rocket, Globe, Target } from 'lucide-react';
+import { motion } from 'framer-motion';
 import './About.css';
 
 function About() {
@@ -67,33 +68,60 @@ function About() {
       </section>
 
       {/* Co-Founders Section */}
-      <section className="section mission-vision-section">
-        <div className="container">
-          <h2 className="text-center scroll-animate">Our Co-Founders</h2>
-          <div className="mv-grid">
-            <div className="mv-card scroll-animate">
-              <div className="cofounder-image-wrapper">
-                <img src="/cofounder1.png" alt="Co-Founder 1" className="cofounder-image" />
-              </div>
-              <h3>Co-Founder Name 1</h3>
-              <p className="cofounder-role">Co-Founder & Head of Operations</p>
-              <p>
-                [Replace with co-founder's introduction. Brief bio highlighting their role, expertise, and contribution to Youth Rise India.]
-              </p>
-            </div>
-            <div className="mv-card scroll-animate">
-              <div className="cofounder-image-wrapper">
-                <img src="/cofounder2.png" alt="Co-Founder 2" className="cofounder-image" />
-              </div>
-              <h3>Co-Founder Name 2</h3>
-              <p className="cofounder-role">Co-Founder & Head of Programs</p>
-              <p>
-                [Replace with co-founder's introduction. Brief bio highlighting their role, expertise, and contribution to Youth Rise India.]
-              </p>
-            </div>
-          </div>
+<section className="section mission-vision-section">
+  <div className="container">
+    <h2 className="text-center scroll-animate">Our Co-Founders</h2>
+
+    <div className="mv-grid">
+      {/* Left Card */}
+      <motion.div
+        className="mv-card"
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        <div className="cofounder-image-wrapper">
+          <img
+            src="/cofounder1.png"
+            alt="Co-Founder 1"
+            className="cofounder-image"
+          />
         </div>
-      </section>
+        <h3>Co-Founder Name 1</h3>
+        <p className="cofounder-role">Co-Founder & Head of Operations</p>
+        <p>
+          [Replace with co-founder's introduction. Brief bio highlighting their
+          role, expertise, and contribution to Youth Rise India.]
+        </p>
+      </motion.div>
+
+      {/* Right Card */}
+      <motion.div
+        className="mv-card"
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        <div className="cofounder-image-wrapper">
+          <img
+            src="/cofounder2.png"
+            alt="Co-Founder 2"
+            className="cofounder-image"
+          />
+        </div>
+        <h3>Co-Founder Name 2</h3>
+        <p className="cofounder-role">Co-Founder & Head of Programs</p>
+        <p>
+          [Replace with co-founder's introduction. Brief bio highlighting their
+          role, expertise, and contribution to Youth Rise India.]
+        </p>
+      </motion.div>
+    </div>
+  </div>
+</section>
+
 
       {/* Our Values */}
       <section className="section bg-white">

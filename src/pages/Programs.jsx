@@ -7,12 +7,39 @@ function Programs() {
   const [expandedId, setExpandedId] = useState(null);
   const [lightboxImage, setLightboxImage] = useState(null);
 
+  
   useEffect(() => {
     fetch('/programs/programs-data.json')
       .then(res => res.json())
       .then(data => setPrograms(data.programs))
       .catch(error => console.error('Error loading programs:', error));
   }, []);
+
+
+  useEffect(() => {
+    
+    if (programs.length === 0) return;
+
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+          
+        }
+      });
+    }, observerOptions);
+
+    
+    const elements = document.querySelectorAll('.scroll-animate');
+    elements.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, [programs]); 
 
   const toggleExpand = (id) => {
     setExpandedId(expandedId === id ? null : id);
@@ -22,7 +49,7 @@ function Programs() {
     <div className="programs-page">
       {/* Hero */}
       <section className="programs-hero">
-        <div className="container">
+        <div className="container scroll-animate">
           <h1>Our Journey</h1>
           <p className="hero-subtitle">
             Programs That Changed Lives - A Timeline of Impact

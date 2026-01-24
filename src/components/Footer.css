@@ -99,11 +99,37 @@
   transition: all var(--transition-base);
 }
 
+/* Base hover stays same */
 .social-link:hover {
-  /* background: var(--saffron-orange); */
   transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(243, 108, 33, 0.3);
+  color: #fff;
 }
+
+/* Instagram */
+.social-link.instagram:hover {
+  background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af);
+  box-shadow: 0 4px 12px rgba(221, 42, 123, 0.4);
+}
+
+/* LinkedIn */
+.social-link.linkedin:hover {
+  background: #0a66c2;
+  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.4);
+}
+
+/* Twitter (X) */
+.social-link.twitter:hover {
+  background: #000000;      
+  color: #ffffff;           
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* WhatsApp */
+.social-link.whatsapp:hover {
+  background: #25d366;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
 
 .footer-contact p {
   color: rgba(255, 255, 255, 0.75);
